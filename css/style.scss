@@ -1,0 +1,142 @@
+@use"../mixins/mixin" as*;
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+ .container{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    height: 400px;
+    .child1{
+        background-image: linear-gradient(#6743ff,#322bea);
+        @include pro (300px ,100%,center);
+        border-radius:20px;
+        padding: 30px;
+        h3{
+            color: #cfc4ff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .circle{
+            @include pos (block ,auto,auto);
+            @include pro (150px ,150px,center);
+            background-image:linear-gradient(#4a23ca,#4633ed) ;
+            border-radius: 50%;
+            padding: 20px;
+            h1{
+            @include font (white ,50px,0);
+            margin-bottom: 0;
+            }
+            p{
+                margin-top: 0;
+                color: #877bff;
+            }
+        }
+        h2{
+            @include font (white ,30px,0);
+            margin-bottom: 0;
+        }
+        p{
+            margin-top: 0;
+            @include font (#cfc4ff ,18px,0);
+            padding: 17px;
+        }
+ }
+ .child2{
+    @include pro (330px ,fit-content,0);
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgb(204, 201, 201) 5px 5px 5px;
+        h3{
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        ul{
+            list-style: none;
+           padding-left: 20px;
+           li:first-child p:first-child{
+           color: hsl(0, 100%, 67%);
+           }
+           li:nth-child(2) p:first-child{
+            color: hsl(39, 100%, 56%);
+            }
+            li:nth-child(3) p:first-child{
+                color: hsl(166, 100%, 37%);
+                }
+            li:last-child p:first-child{
+                    color: hsl(234, 85%, 45%);
+                    }
+            li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color:#fff6f5;
+                border-radius: 25px;
+                margin-bottom: 10px;
+                padding: 3px;
+                height: 50px;
+                p:first-child{
+                   font-weight: 900;
+                   display: flex;
+                   justify-content: space-around;
+                   img{
+                    margin-right: 10px;
+                }
+                    }
+                p:last-child{
+                    @include font (0 ,18px,bold);
+                    span:last-child{
+                        color: #a39fad;
+                    }
+                }
+                }
+            }
+        }
+        button{
+            @include font (white ,15px,bold);
+            background-color: #303b59;
+            @include pos (block ,auto,auto);
+            padding: 15px 30px 15px 30px;
+            border: 0px;
+            border-radius: 20px;
+            width: 250px;
+            margin-bottom: 13px; 
+            cursor:pointer;
+            &:hover{
+                background-image: linear-gradient(#6743ff,#322bea); ;
+            }
+        }
+    }
+    @media(max-width:400px){
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin-top: 0;
+            display: block;
+            .child1{
+                height: 340px;
+                border-radius: 0px 0px 20px 20px;
+            .circle{
+                @include pro (100px ,100px,center);
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            p{
+                padding: 0;
+                margin-top: 20px;
+            }
+            }
+            .child2{
+            width: 330px;
+            border-radius: 0;
+            box-shadow: 0 0 0 0;
+                }
+        }  
+    }
+    
+ 

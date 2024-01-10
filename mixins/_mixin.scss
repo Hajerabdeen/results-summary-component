@@ -1,0 +1,15 @@
+@mixin pro($p1,$p2,$p3){
+    width: $p1;
+    height: $p2;
+    text-align: $p3;
+}
+@mixin pos($p1,$p2,$p3){
+    display: $p1;
+    margin-left: $p2;
+    margin-right: $p3;
+}
+@mixin font($p1,$p2,$p3){
+    color: $p1;
+    font-size: $p2;
+    font-weight: $p3;
+}
